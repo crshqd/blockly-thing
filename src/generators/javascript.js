@@ -25,12 +25,13 @@ forBlock['add_text'] = function (block, generator) {
 forBlock['add_image'] = function (block, generator) {
   const image = block.getFieldValue('IMAGE');
   const desc = block.getFieldValue('DESC');
+  const size = block.getFieldValue('SIZE');
   const code = `client.addimage('${image.replace(
     "'",
     "\\'"
   )}', '${desc.replace(
     "'",
     "\\'"
-  )}')\n`;
+  )}', ${size})\n`;
   return code;
 }
