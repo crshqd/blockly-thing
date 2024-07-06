@@ -17,4 +17,13 @@ client.addtext = function (font, size, text) {
   document.getElementById('output').appendChild(br);
   document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
 };
+client.addimage = function (url, desc) {
+  const elem = document.createElement('img');
+  const br = document.createElement('br');
+  elem.src = url;
+  elem.alt = desc;
+  document.getElementById('output').appendChild(elem);
+  document.getElementById('output').appendChild(br);
+  document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
+}
 module.exports = client;

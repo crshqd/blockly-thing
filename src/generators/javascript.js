@@ -22,11 +22,13 @@ forBlock['add_text'] = function (block, generator) {
   )}')\n`;
   return code;
 }
-
 forBlock['add_image'] = function (block, generator) {
   const image = block.getFieldValue('IMAGE');
   const desc = block.getFieldValue('DESC');
-  const code = `client.addimage('${image}', '${desc.replace(
+  const code = `client.addimage('${image.replace(
+    "'",
+    "\\'"
+  )}', '${desc.replace(
     "'",
     "\\'"
   )}')\n`;
