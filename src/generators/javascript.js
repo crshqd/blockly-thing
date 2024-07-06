@@ -51,7 +51,7 @@ forBlock['modify_text_of_named_text'] = function (block, generator) {
   )}', '${text.replace(
     "'",
     "\\'"
-  )}')`
+  )}')\n`
   return code
 }
 
@@ -62,7 +62,7 @@ forBlock['modify_font_of_named_text'] = function (block, generator) {
   const code = `client.mfont('${name.replace(
     "'",
     "\\'"
-  )}', '${font}')`
+  )}', '${font}')\n`
   return code
 }
 
@@ -73,6 +73,6 @@ forBlock['modify_size_of_named_text'] = function (block, generator) {
   const code = `client.msont('${name.replace(
     "'",
     "\\'"
-  )}', '${size}')`
+  )}', '${size}')\n`
   return code
 }
