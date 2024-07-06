@@ -73,3 +73,24 @@ forBlock['modify_size_of_named_text'] = function (block, generator) {
   )}', '${size}')\n`
   return code
 }
+
+forBlock['text_of_named_text'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  if (document.getElementById('tname-'+name) == null) return ['\'\'', Order.NONE];
+  const code = `client.gtont(${name})`;
+  return [code, Order.NONE]
+}
+
+forBlock['size_of_named_text'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  if (document.getElementById('tname-'+name) == null) return ['0', Order.NONE];
+  const code = `client.gsont(${name})`;
+  return [code, Order.NONE]
+}
+
+forBlock['font_of_named_text'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  if (document.getElementById('tname-'+name) == null) return ['\'\'', Order.NONE];
+  const code = `client.gfont(${name})`;
+  return [code, Order.NONE]
+}

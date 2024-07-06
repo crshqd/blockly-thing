@@ -33,7 +33,7 @@ const entries = [
   },
   {
     type: "add_image",
-    tooltip: "Adds a image onto the screen.",
+    tooltip: "",
     helpUrl: "",
     message0: "Add image %1 %2 %3% size",
     args0: [
@@ -61,7 +61,7 @@ const entries = [
   },
   {
     "type": "add_named_text",
-    "tooltip": "Adds a named text onto the page.",
+    "tooltip": "",
     "helpUrl": "",
     "message0": "Add named text %1 %2 %3 %4",
     "args0": [
@@ -176,6 +176,51 @@ const entries = [
     ],
     "previousStatement": null,
     "nextStatement": null,
+    "colour": 315
+  },
+  {
+    "type": "text_of_named_text",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Text of named text %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      }
+    ],
+    "output": "String",
+    "colour": 315
+  },
+  {
+    "type": "size_of_named_text",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Size of named text %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      }
+    ],
+    "output": "Number",
+    "colour": 315
+  },
+  {
+    "type": "font_of_named_text",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Font of named text %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      }
+    ],
+    "output": "String",
     "colour": 315
   }
 ];

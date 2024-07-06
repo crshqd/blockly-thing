@@ -67,16 +67,24 @@ client.msont = function (name, size) {
   if (document.getElementById('tname-'+name) == null) return;
   document.getElementById('tname-'+name).style.fontSize = `${size}pt`;
 }
-client.addnamedimage = function (url, desc, size, name) {
-  const elem = document.createElement('img');
-  const br = document.createElement('br');
-  elem.src = url;
-  elem.alt = desc;
-  elem.width = `${size*elem.naturalWidth/100}`;
-  elem.height = `${size*elem.naturalHeight/100}`;
-  elem.id = 'iname-'+name;
-  document.getElementById('output').appendChild(elem);
-  document.getElementById('output').appendChild(br);
-  document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
+client.gtont = function (name) {
+  if (document.getElementById('tname-'+name) == null) return;
+  return document.getElementById('tname-'+name).innerText;
+}
+client.gfont = function (name) {
+  if (document.getElementById('tname-'+name) == null) return;
+  if (document.getElementById('tname-'+name).style.fontFamily == '"Arial", sans-serif') {
+    return "Arial"
+  } else if (document.getElementById('tname-'+name).style.fontFamily == '"Comic Sans MS", cursive') {
+    return "Comic Sans MS"
+  } else if (document.getElementById('tname-'+name).style.fontFamily == 'monospace') {
+    return "Monospace"
+  } else {
+    return "Arial"
+  }
+}
+client.gsont = function (name) {
+  if (document.getElementById('tname-'+name) == null) return;
+  return document.getElementById('tname-'+name).style.fontSize.replace('pt', '');
 }
 module.exports = client;
