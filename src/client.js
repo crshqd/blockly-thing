@@ -42,29 +42,41 @@ client.addnamedtext = function (font, size, text, name) {
     elem.style.fontFamily = '"Arial", sans-serif';
   }
   elem.innerText = text;
-  elem.id = name;
+  elem.id = 'tname-'+name;
   document.getElementById('output').appendChild(elem);
   document.getElementById('output').appendChild(br);
   document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
 };
 client.mtont = function (name, text) {
-  if (document.getElementById(name) == null) return;
-  document.getElementById(name).innerText = text;
+  if (document.getElementById('tname-'+name) == null) return;
+  document.getElementById('tname-'+name).innerText = text;
 }
 client.mfont = function (name, font) {
-  if (document.getElementById(name) == null) return;
+  if (document.getElementById('tname-'+name) == null) return;
   if (font == "ARIAL") {
-    document.getElementById(name).style.fontFamily = '"Arial", sans-serif';
+    document.getElementById('tname-'+name).style.fontFamily = '"Arial", sans-serif';
   } else if (font == "COMICSANS") {
-    document.getElementById(name).style.fontFamily = '"Comic Sans MS", cursive';
+    document.getElementById('tname-'+name).style.fontFamily = '"Comic Sans MS", cursive';
   } else if (font == "MONOSPACE") {
-    document.getElementById(name).style.fontFamily = 'monospace';
+    document.getElementById('tname-'+name).style.fontFamily = 'monospace';
   } else {
-    document.getElementById(name).style.fontFamily = '"Arial", sans-serif';
+    document.getElementById('tname-'+name).style.fontFamily = '"Arial", sans-serif';
   }
 }
 client.msont = function (name, size) {
-  if (document.getElementById(name) == null) return;
-  document.getElementById(name).style.fontSize = `${size}pt`;
+  if (document.getElementById('tname-'+name) == null) return;
+  document.getElementById('tname-'+name).style.fontSize = `${size}pt`;
+}
+client.addnamedimage = function (url, desc, size, name) {
+  const elem = document.createElement('img');
+  const br = document.createElement('br');
+  elem.src = url;
+  elem.alt = desc;
+  elem.width = `${size*elem.naturalWidth/100}`;
+  elem.height = `${size*elem.naturalHeight/100}`;
+  elem.id = 'iname-'+name;
+  document.getElementById('output').appendChild(elem);
+  document.getElementById('output').appendChild(br);
+  document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
 }
 module.exports = client;
