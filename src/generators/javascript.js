@@ -43,15 +43,12 @@ forBlock['add_named_text'] = function (block, generator) {
 }
 forBlock['modify_text_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
-  const text = block.getFieldValue('TEXT');
+  const text = generator.valueToCode(block, 'TEXT', Order.ATOMIC);
 
   const code = `client.mtont('${name.replace(
     "'",
     "\\'"
-  )}', '${text.replace(
-    "'",
-    "\\'"
-  )}')\n`
+  )}', String(${text != '' ? text : '\'\''}))\n`
   return code
 }
 

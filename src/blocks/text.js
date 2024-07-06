@@ -116,8 +116,7 @@ const entries = [
       },
       {
         "type": "input_value",
-        "name": "TEXT",
-        "check": "String"
+        "name": "TEXT"
       }
     ],
     "previousStatement": null,
