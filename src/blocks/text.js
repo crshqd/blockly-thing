@@ -115,9 +115,9 @@ const entries = [
         "text": "name"
       },
       {
-        "type": "field_input",
+        "type": "input_value",
         "name": "TEXT",
-        "text": "Hello Earth"
+        "check": "String"
       }
     ],
     "previousStatement": null,
