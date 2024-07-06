@@ -498,6 +498,18 @@ export const toolbox = {
           kind: 'block',
           type: 'add_named_text',
         },
+        {
+          kind: 'block',
+          type: 'modify_text_of_named_text',
+        },
+        {
+          kind: 'block',
+          type: 'modify_font_of_named_text',
+        },
+        {
+          kind: 'block',
+          type: 'modify_size_of_named_text',
+        },
       ],
     },
     {

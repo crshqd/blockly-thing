@@ -107,7 +107,7 @@ const entries = [
     "type": "modify_text_of_named_text",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "modify text of named text %1 %2",
+    "message0": "Modify text of named text %1 %2",
     "args0": [
       {
         "type": "field_input",
@@ -128,7 +128,7 @@ const entries = [
     "type": "modify_font_of_named_text",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "modify font of named text %1 %2",
+    "message0": "Modify font of named text %1 %2",
     "args0": [
       {
         "type": "field_input",
@@ -162,7 +162,7 @@ const entries = [
     "type": "modify_size_of_named_text",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "modify size of named text %1 %2",
+    "message0": "Modify size of named text %1 %2",
     "args0": [
       {
         "type": "field_input",

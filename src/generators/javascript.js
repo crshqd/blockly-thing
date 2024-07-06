@@ -52,6 +52,7 @@ forBlock['modify_text_of_named_text'] = function (block, generator) {
     "'",
     "\\'"
   )}')`
+  return code
 }
 
 forBlock['modify_font_of_named_text'] = function (block, generator) {
@@ -62,6 +63,7 @@ forBlock['modify_font_of_named_text'] = function (block, generator) {
     "'",
     "\\'"
   )}', '${font}')`
+  return code
 }
 
 forBlock['modify_size_of_named_text'] = function (block, generator) {
@@ -72,4 +74,5 @@ forBlock['modify_size_of_named_text'] = function (block, generator) {
     "'",
     "\\'"
   )}', '${size}')`
+  return code
 }
