@@ -102,6 +102,82 @@ const entries = [
     "previousStatement": null,
     "nextStatement": null,
     "colour": 315
+  },
+  {
+    "type": "modify_text_of_named_text",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "modify text of named text %1 %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_input",
+        "name": "TEXT",
+        "text": "Hello Earth"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
+  },
+  {
+    "type": "modify_font_of_named_text",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "modify font of named text %1 %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_dropdown",
+        "name": "FONT",
+        "options": [
+          [
+            "Arial",
+            "ARIAL"
+          ],
+          [
+            "Comic Sans MS",
+            "COMICSANS"
+          ],
+          [
+            "Monospace",
+            "MONOSPACE"
+          ]
+        ]
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
+  },
+  {
+    "type": "modify_size_of_named_text",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "modify size of named text %1 %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_number",
+        "name": "SIZE",
+        "value": 16
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
   }
 ];
 

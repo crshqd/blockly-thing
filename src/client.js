@@ -47,4 +47,21 @@ client.addnamedtext = function (font, size, text, name) {
   document.getElementById('output').appendChild(br);
   document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
 };
+client.mtont = function (name, text) {
+  document.getElementById(name).innerText = text;
+}
+client.mfont = function (name, font) {
+  if (font == "ARIAL") {
+    document.getElementById(name).style.fontFamily = '"Arial", sans-serif';
+  } else if (font == "COMICSANS") {
+    document.getElementById(name).style.fontFamily = '"Comic Sans MS", cursive';
+  } else if (font == "MONOSPACE") {
+    document.getElementById(name).style.fontFamily = 'monospace';
+  } else {
+    document.getElementById(name).style.fontFamily = '"Arial", sans-serif';
+  }
+}
+client.msont = function (name, size) {
+  document.getElementById(name).style.fontSize = `${size}pt`;
+}
 module.exports = client;
