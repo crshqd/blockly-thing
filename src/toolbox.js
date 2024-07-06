@@ -510,6 +510,18 @@ export const toolbox = {
           kind: 'block',
           type: 'modify_size_of_named_text',
         },
+        {
+          kind: 'block',
+          type: 'text_of_named_text',
+        },
+        {
+          kind: 'block',
+          type: 'font_of_named_text',
+        },
+        {
+          kind: 'block',
+          type: 'size_of_named_text',
+        },
       ],
     },
     {
