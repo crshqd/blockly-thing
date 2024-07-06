@@ -73,7 +73,7 @@ const entries = [
     "type": "add_named_text",
     "tooltip": "Adds a named text onto the page.",
     "helpUrl": "",
-    "message0": "add named text %1 %2 %3 %4",
+    "message0": "Add named text %1 %2 %3 %4",
     "args0": [
       {
         "type": "field_dropdown",
