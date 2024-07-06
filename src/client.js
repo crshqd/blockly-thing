@@ -48,9 +48,11 @@ client.addnamedtext = function (font, size, text, name) {
   document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
 };
 client.mtont = function (name, text) {
+  if (document.getElementById(name) == null) return;
   document.getElementById(name).innerText = text;
 }
 client.mfont = function (name, font) {
+  if (document.getElementById(name) == null) return;
   if (font == "ARIAL") {
     document.getElementById(name).style.fontFamily = '"Arial", sans-serif';
   } else if (font == "COMICSANS") {
@@ -62,6 +64,7 @@ client.mfont = function (name, font) {
   }
 }
 client.msont = function (name, size) {
+  if (document.getElementById(name) == null) return;
   document.getElementById(name).style.fontSize = `${size}pt`;
 }
 module.exports = client;
