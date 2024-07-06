@@ -68,6 +68,50 @@ const entries = [
     previousStatement: null,
     nextStatement: null,
     colour: 315
+  },
+  {
+    "type": "add_named_text",
+    "tooltip": "Adds a named text onto the page.",
+    "helpUrl": "",
+    "message0": "add named text %1 %2 %3 %4",
+    "args0": [
+      {
+        "type": "field_dropdown",
+        "name": "FONT",
+        "options": [
+          [
+            "Arial",
+            "ARIAL"
+          ],
+          [
+            "Comic Sans MS",
+            "COMICSANS"
+          ],
+          [
+            "Monospace",
+            "MONOSPACE"
+          ]
+        ]
+      },
+      {
+        "type": "field_number",
+        "name": "SIZE",
+        "value": 16
+      },
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_input",
+        "name": "TEXT",
+        "text": "Hello World"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
   }
 ];
 

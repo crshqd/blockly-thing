@@ -35,3 +35,18 @@ forBlock['add_image'] = function (block, generator) {
   )}', ${size})\n`;
   return code;
 }
+forBlock['add_text'] = function (block, generator) {
+  const font = block.getFieldValue('FONT');
+  const size = block.getFieldValue('SIZE');
+  const text = block.getFieldValue('TEXT');
+  const name = block.getFieldValue('NAME');
+  
+  const code = `client.addnamedtext('${font}', ${size}, '${text.replace(
+    "'",
+    "\\'"
+  )}', '${name.replace(
+    "'",
+    "\\'"
+  )}')\n`;
+  return code;
+}

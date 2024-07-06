@@ -506,6 +506,10 @@ export const toolbox = {
           kind: 'block',
           type: 'add_image',
         },
+        {
+          kind: 'block',
+          type: 'add_named_text',
+        },
       ],
     },
     {
