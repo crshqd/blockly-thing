@@ -522,6 +522,10 @@ export const toolbox = {
           kind: 'block',
           type: 'size_of_named_text',
         },
+        {
+          kind: 'block',
+          type: 'delete_named_text',
+        },
       ],
     },
     {

@@ -22,6 +22,7 @@ const runCode = () => {
 
   const clientEval = new Function('client', code);
   clientEval(client);
+  getHTML()
 };
 
 runCode();
@@ -36,3 +37,7 @@ ws.addChangeListener((e) => {
   }
   runCode();
 });
+
+function getHTML() {
+  document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
+}

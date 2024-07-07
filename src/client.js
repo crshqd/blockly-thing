@@ -15,7 +15,6 @@ client.addtext = function (font, size, text) {
   elem.innerText = text;
   document.getElementById('output').appendChild(elem);
   document.getElementById('output').appendChild(br);
-  document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
 };
 client.addimage = function (url, desc, size) {
   const elem = document.createElement('img');
@@ -26,7 +25,6 @@ client.addimage = function (url, desc, size) {
   elem.height = `${size*elem.naturalHeight/100}`;
   document.getElementById('output').appendChild(elem);
   document.getElementById('output').appendChild(br);
-  document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
 }
 client.addnamedtext = function (font, size, text, name) {
   const elem = document.createElement('span');
@@ -45,7 +43,6 @@ client.addnamedtext = function (font, size, text, name) {
   elem.id = 'tname-'+name;
   document.getElementById('output').appendChild(elem);
   document.getElementById('output').appendChild(br);
-  document.getElementById('pre').innerText = document.getElementById('output').innerHTML;
 };
 client.mtont = function (name, text) {
   if (document.getElementById('tname-'+name) == null) return;
@@ -86,5 +83,9 @@ client.gfont = function (name) {
 client.gsont = function (name) {
   if (document.getElementById('tname-'+name) == null) return;
   return document.getElementById('tname-'+name).style.fontSize.replace('pt', '');
+}
+client.delete = function (name) {
+  if (document.getElementById('tname-'+name) == null) return;
+  document.getElementById('tname-'+name).remove();
 }
 module.exports = client;

@@ -222,6 +222,22 @@ const entries = [
     ],
     "output": "String",
     "colour": 315
+  }, 
+  {
+    "type": "delete_named_text",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Delete named text %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
   }
 ];
 

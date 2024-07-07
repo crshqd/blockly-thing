@@ -77,20 +77,26 @@ forBlock['modify_size_of_named_text'] = function (block, generator) {
 forBlock['text_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['\'\'', Order.NONE];
-  const code = `client.gtont('${name}')`;
+  const code = `client.gtont('${name}')\n`;
   return [code, Order.NONE]
 }
 
 forBlock['size_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['0', Order.NONE];
-  const code = `client.gsont('${name}')`;
+  const code = `client.gsont('${name}')\n`;
   return [code, Order.NONE]
 }
 
 forBlock['font_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['\'\'', Order.NONE];
-  const code = `client.gfont('${name}')`;
+  const code = `client.gfont('${name}')\n`;
   return [code, Order.NONE]
 }
+forBlock['delete_named_text'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  if (document.getElementById('tname-' + name) == null) return '';
+  const code = `client.delete('${name}');\n`;
+  return code;
+};
