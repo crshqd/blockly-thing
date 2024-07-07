@@ -271,6 +271,71 @@ const entries = [
     "previousStatement": null,
     "nextStatement": null,
     "colour": 315
+  },
+  {
+    "type": "modify_image_of_named_image",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Modify image of named image %1 %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_input",
+        "name": "IMAGE",
+        "text": "https://www.icegif.com/wp-content/uploads/2023/09/icegif-140.gif"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
+  },
+  {
+    "type": "modify_desc_of_named_image",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Modify description of named image %1 %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_input",
+        "name": "DESC",
+        "text": "Sussy"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
+  },
+  {
+    "type": "modify_size_of_named_image",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Modify size of named image %1 %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_number",
+        "name": "SIZE",
+        "value": 80,
+        "min": 0,
+        "max": 100
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
   }
 ];
 

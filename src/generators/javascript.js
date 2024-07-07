@@ -117,3 +117,41 @@ forBlock['add_named_image'] = function (block, generator) {
   )}')\n`;
   return code;
 }
+forBlock['modify_image_of_named_image'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const image = block.getFieldValue('IMAGE');
+
+  const code = `client.mioni('${name.replace(
+    "'",
+    "\\'"
+  )}', '${image.replace(
+    "'",
+    "\\'"
+  )}')\n`
+  return code
+}
+
+forBlock['modify_desc_of_named_image'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const desc = block.getFieldValue('DESC');
+
+  const code = `client.mdoni('${name.replace(
+    "'",
+    "\\'"
+  )}', '${desc.replace(
+    "'",
+    "\\'"
+  )}')\n`
+  return code
+}
+
+forBlock['modify_size_of_named_image'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const size = block.getFieldValue('SIZE');
+
+  const code = `client.msoni('${name.replace(
+    "'",
+    "\\'"
+  )}', ${size})\n`
+  return code
+}

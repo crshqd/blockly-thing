@@ -530,6 +530,18 @@ export const toolbox = {
           kind: 'block',
           type: 'add_named_image',
         },
+        {
+          kind: 'block',
+          type: 'modify_image_of_named_image',
+        },
+        {
+          kind: 'block',
+          type: 'modify_desc_of_named_image',
+        },
+        {
+          kind: 'block',
+          type: 'modify_size_of_named_image',
+        },
       ],
     },
     {

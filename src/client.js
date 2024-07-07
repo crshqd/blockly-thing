@@ -99,4 +99,17 @@ client.addnamedimage = function (url, desc, size, name) {
   document.getElementById('output').appendChild(elem);
   document.getElementById('output').appendChild(br);
 }
+client.mioni = function (name, image) {
+  if (document.getElementById('iname-'+name) == null) return;
+  document.getElementById('iname-'+name).src = image;
+}
+client.mdoni = function (name, desc) {
+  if (document.getElementById('iname-'+name) == null) return;
+  document.getElementById('iname-'+name).alt = desc;
+}
+client.msoni = function (name, size) {
+  if (document.getElementById('iname-'+name) == null) return;
+  document.getElementById('iname-'+name).width = `${size*document.getElementById('iname-'+name).naturalWidth/100}`;
+  document.getElementById('iname-'+name).height = `${size*document.getElementById('iname-'+name).naturalHeight/100}`;
+}
 module.exports = client;
