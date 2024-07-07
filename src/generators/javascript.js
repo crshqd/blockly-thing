@@ -167,10 +167,10 @@ forBlock['on_start'] = function (block, generator) {
   const code = `function start${random}() {\n${code2}}\nclient.startlist(start${random})`;
   return code;
 }
-forBlock['custom_script'] = function() {
+forBlock['custom_script'] = function (block, generator) {
   const code2 = block.getFieldValue('CODE');
   const ready = block.getFieldValue('READY');
-  if (!ready) return;
-  const code = code2+'\n';
+  if (ready == "FALSE") return '';
+  const code = `${code2}\n`;
   return code;
 }
