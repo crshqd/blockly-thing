@@ -357,7 +357,7 @@ const entries = [
     "type": "on_start",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "%1 on start %2 %3",
+    "message0": "%1 On start %2 %3",
     "args0": [
       {
         "type": "field_image",
@@ -404,7 +404,7 @@ const entries = [
     "type": "add_canvas",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "add canvas %1 %2 %3",
+    "message0": "Add canvas %1 %2 %3",
     "args0": [
       {
         "type": "field_input",
