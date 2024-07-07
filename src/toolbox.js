@@ -550,9 +550,17 @@ export const toolbox = {
     },
     {
       kind: 'category',
-      name: 'Game Logic',
+      name: 'Game',
       colour: '195',
       contents: [
+        {
+          kind: 'block',
+          type: 'on_start',
+        },
+        {
+          kind: 'block',
+          type: 'custom_script',
+        },
       ]
     },
     {

@@ -161,3 +161,16 @@ forBlock['delete_named_image'] = function (block, generator) {
   const code = `client.idelete('${name}');\n`;
   return code;
 };
+forBlock['on_start'] = function (block, generator) {
+  const code2 = generator.statementToCode(block, 'CODE');
+  const random = Math.floor(Math.random() * 1000000);
+  const code = `function start${random}() {\n${code2}}\nclient.startlist(start${random})`;
+  return code;
+}
+forBlock['custom_script'] = function() {
+  const code2 = block.getFieldValue('CODE');
+  const ready = block.getFieldValue('READY');
+  if (!ready) return;
+  const code = code2+'\n';
+  return code;
+}

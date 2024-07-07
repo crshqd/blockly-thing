@@ -4,7 +4,7 @@ import {forBlock} from './generators/javascript';
 import {javascriptGenerator} from 'blockly/javascript';
 import {toolbox} from './toolbox';
 import './index.css';
-import * as client from './client';
+import * as client from './clientui';
 
 Blockly.common.defineBlocks(blocks);
 Object.assign(javascriptGenerator.forBlock, forBlock);

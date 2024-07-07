@@ -353,6 +353,53 @@ const entries = [
     "nextStatement": null,
     "colour": 315
   },
+  {
+    "type": "on_start",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "%1 on start %2 %3",
+    "args0": [
+      {
+        "type": "field_image",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Greenflag.svg",
+        "width": 15,
+        "height": 15,
+        "alt": "Green flag",
+        "flipRtl": "FALSE"
+      },
+      {
+        "type": "input_end_row",
+        "name": ""
+      },
+      {
+        "type": "input_statement",
+        "name": "CODE"
+      }
+    ],
+    "nextStatement": null,
+    "colour": 195
+  },
+  {
+    "type": "custom_script",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Custom script [for experts only] %1 ready to run %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "CODE",
+        "text": ""
+      },
+      {
+        "type": "field_checkbox",
+        "name": "READY",
+        "checked": "FALSE"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 195
+  }
 ];
 
 export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(entries);
