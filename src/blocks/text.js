@@ -414,13 +414,13 @@ const entries = [
       {
         "type": "field_number",
         "name": "WIDTH",
-        "value": 405,
+        "value": 305,
         "min": 0
       },
       {
         "type": "field_number",
         "name": "HEIGHT",
-        "value": 295,
+        "value": 195,
         "min": 0
       }
     ],
