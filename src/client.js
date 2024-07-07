@@ -88,4 +88,15 @@ client.delete = function (name) {
   if (document.getElementById('tname-'+name) == null) return;
   document.getElementById('tname-'+name).remove();
 }
+client.addnamedimage = function (url, desc, size, name) {
+  const elem = document.createElement('img');
+  const br = document.createElement('br');
+  elem.src = url;
+  elem.alt = desc;
+  elem.width = `${size*elem.naturalWidth/100}`;
+  elem.height = `${size*elem.naturalHeight/100}`;
+  elem.id = 'iname-'+name;
+  document.getElementById('output').appendChild(elem);
+  document.getElementById('output').appendChild(br);
+}
 module.exports = client;

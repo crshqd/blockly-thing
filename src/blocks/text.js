@@ -238,6 +238,39 @@ const entries = [
     "previousStatement": null,
     "nextStatement": null,
     "colour": 315
+  },
+  {
+    "type": "add_named_image",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Add named image %1 %2 %3 %4 % size",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_input",
+        "name": "IMAGE",
+        "text": "https://www.icegif.com/wp-content/uploads/2023/09/icegif-140.gif"
+      },
+      {
+        "type": "field_input",
+        "name": "DESC",
+        "text": "Sussy"
+      },
+      {
+        "type": "field_number",
+        "name": "SIZE",
+        "value": 100,
+        "min": 0,
+        "max": 100
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
   }
 ];
 

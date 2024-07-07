@@ -100,3 +100,20 @@ forBlock['delete_named_text'] = function (block, generator) {
   const code = `client.delete('${name}');\n`;
   return code;
 };
+forBlock['add_named_image'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const image = block.getFieldValue('IMAGE');
+  const desc = block.getFieldValue('DESC');
+  const size = block.getFieldValue('SIZE');
+  const code = `client.addnamedimage('${image.replace(
+    "'",
+    "\\'"
+  )}', '${desc.replace(
+    "'",
+    "\\'"
+  )}', ${size}, '${name.replace(
+    "'",
+    "\\'"
+  )}')\n`;
+  return code;
+}

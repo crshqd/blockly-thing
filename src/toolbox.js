@@ -526,6 +526,10 @@ export const toolbox = {
           kind: 'block',
           type: 'delete_named_text',
         },
+        {
+          kind: 'block',
+          type: 'add_named_image',
+        },
       ],
     },
     {
