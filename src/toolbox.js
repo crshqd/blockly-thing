@@ -567,6 +567,12 @@ export const toolbox = {
       kind: 'category',
       name: 'Canvas',
       colour: '30',
+      contents: [
+        {
+          kind: 'block',
+          type: 'add_canvas',
+        }
+      ]
     },
     {
       kind: 'sep',
