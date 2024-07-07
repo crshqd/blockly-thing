@@ -51,7 +51,6 @@ forBlock['modify_text_of_named_text'] = function (block, generator) {
   )}', String(${text != '' ? text : '\'\''}))\n`
   return code
 }
-
 forBlock['modify_font_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   const font = block.getFieldValue('FONT');
@@ -62,7 +61,6 @@ forBlock['modify_font_of_named_text'] = function (block, generator) {
   )}', '${font}')\n`
   return code
 }
-
 forBlock['modify_size_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   const size = block.getFieldValue('SIZE');
@@ -73,21 +71,18 @@ forBlock['modify_size_of_named_text'] = function (block, generator) {
   )}', '${size}')\n`
   return code
 }
-
 forBlock['text_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['\'\'', Order.NONE];
   const code = `client.gtont('${name}')\n`;
   return [code, Order.NONE]
 }
-
 forBlock['size_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['0', Order.NONE];
   const code = `client.gsont('${name}')\n`;
   return [code, Order.NONE]
 }
-
 forBlock['font_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['\'\'', Order.NONE];
@@ -130,7 +125,6 @@ forBlock['modify_image_of_named_image'] = function (block, generator) {
   )}')\n`
   return code
 }
-
 forBlock['modify_desc_of_named_image'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   const desc = block.getFieldValue('DESC');
@@ -144,7 +138,6 @@ forBlock['modify_desc_of_named_image'] = function (block, generator) {
   )}')\n`
   return code
 }
-
 forBlock['modify_size_of_named_image'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   const size = block.getFieldValue('SIZE');
@@ -172,5 +165,16 @@ forBlock['custom_script'] = function (block, generator) {
   const ready = block.getFieldValue('READY');
   if (ready == "FALSE") return '';
   const code = `${code2}\n`;
+  return code;
+}
+forBlock['add_canvas'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const width = block.getFieldValue('WIDTH');
+  const height = block.getFieldValue('HEIGHT');
+
+  const code = `client.addcanvas('${name.replace(
+    "'",
+    "\\'"
+  )}', ${width}, ${height})`;
   return code;
 }

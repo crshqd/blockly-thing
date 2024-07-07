@@ -117,4 +117,13 @@ client.idelete = function (name) {
   document.getElementById('iname-'+name).remove();
 }
 client.startlist = function () {};
+client.addcanvas = function (name, width, height) {
+  const elem = document.createElement('canvas');
+  const br = document.createElement('br');
+  elem.id = 'cname-'+name;
+  elem.width = width;
+  elem.height = height;
+  document.getElementById('output').appendChild(elem);
+  document.getElementById('output').appendChild(br);
+}
 module.exports = client;
