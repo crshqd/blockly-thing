@@ -155,3 +155,9 @@ forBlock['modify_size_of_named_image'] = function (block, generator) {
   )}', ${size})\n`
   return code
 }
+forBlock['delete_named_image'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  if (document.getElementById('iname-' + name) == null) return '';
+  const code = `client.idelete('${name}');\n`;
+  return code;
+};

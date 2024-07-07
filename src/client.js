@@ -112,4 +112,8 @@ client.msoni = function (name, size) {
   document.getElementById('iname-'+name).width = `${size*document.getElementById('iname-'+name).naturalWidth/100}`;
   document.getElementById('iname-'+name).height = `${size*document.getElementById('iname-'+name).naturalHeight/100}`;
 }
+client.idelete = function (name) {
+  if (document.getElementById('iname-'+name) == null) return;
+  document.getElementById('iname-'+name).remove();
+}
 module.exports = client;

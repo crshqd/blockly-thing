@@ -542,7 +542,23 @@ export const toolbox = {
           kind: 'block',
           type: 'modify_size_of_named_image',
         },
+        {
+          kind: 'block',
+          type: 'delete_named_image',
+        },
       ],
+    },
+    {
+      kind: 'category',
+      name: 'Game Logic',
+      colour: '195',
+      contents: [
+      ]
+    },
+    {
+      kind: 'category',
+      name: 'Canvas',
+      colour: '30',
     },
     {
       kind: 'sep',
