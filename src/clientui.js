@@ -123,6 +123,7 @@ client.addcanvas = function (name, width, height) {
   elem.id = 'cname-'+name;
   elem.width = width;
   elem.height = height;
+  elem.style.border = '1px solid #000';
   document.getElementById('output').appendChild(elem);
   document.getElementById('output').appendChild(br);
 }
