@@ -376,7 +376,6 @@ const entries = [
         "name": "CODE"
       }
     ],
-    "nextStatement": null,
     "colour": 195
   },
   {
@@ -513,6 +512,21 @@ const entries = [
     ],
     "previousStatement": null,
     "nextStatement": null,
+    "colour": 30
+  },
+  {
+    "type": "line_size",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Line size %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      }
+    ],
+    "output": "Number",
     "colour": 30
   },
 ];

@@ -74,19 +74,19 @@ forBlock['modify_size_of_named_text'] = function (block, generator) {
 forBlock['text_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['\'\'', Order.NONE];
-  const code = `client.gtont('${name}')\n`;
+  const code = `client.gtont('${name}')`;
   return [code, Order.NONE]
 }
 forBlock['size_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['0', Order.NONE];
-  const code = `client.gsont('${name}')\n`;
+  const code = `client.gsont('${name}')`;
   return [code, Order.NONE]
 }
 forBlock['font_of_named_text'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('tname-'+name) == null) return ['\'\'', Order.NONE];
-  const code = `client.gfont('${name}')\n`;
+  const code = `client.gfont('${name}')`;
   return [code, Order.NONE]
 }
 forBlock['delete_named_text'] = function (block, generator) {
@@ -157,7 +157,7 @@ forBlock['delete_named_image'] = function (block, generator) {
 forBlock['on_start'] = function (block, generator) {
   const code2 = generator.statementToCode(block, 'CODE');
   const random = Math.floor(Math.random() * 1000000);
-  const code = `function start${random}() {\n${code2}}\nclient.startlist(start${random})`;
+  const code = `function start${random}() {\n${code2}}\nclient.startlist(start${random})\n`;
   return code;
 }
 forBlock['custom_script'] = function (block, generator) {
@@ -175,7 +175,7 @@ forBlock['add_canvas'] = function (block, generator) {
   const code = `client.addcanvas('${name.replace(
     "'",
     "\\'"
-  )}', ${width}, ${height})`;
+  )}', ${width}, ${height})\n`;
   return code;
 }
 forBlock['modify_size_of_canvas'] = function (block, generator) {
@@ -186,7 +186,7 @@ forBlock['modify_size_of_canvas'] = function (block, generator) {
   const code = `client.msic('${name.replace(
     "'",
     "\\'"
-  )}', ${width}, ${height})`;
+  )}', ${width}, ${height})\n`;
   return code;
 }
 forBlock['delete_canvas'] = function (block, generator) {
@@ -202,7 +202,7 @@ forBlock['set_line_size'] = function (block, generator) {
   const code = `client.sls('${name.replace(
     "'",
     "\\'"
-  )}', ${size})`;
+  )}', ${size})\n`;
   return code;
 }
 forBlock['set_line_color'] = function (block, generator) {
@@ -212,6 +212,12 @@ forBlock['set_line_color'] = function (block, generator) {
   const code = `client.slc('${name.replace(
     "'",
     "\\'"
-  )}', '${color}')`;
+  )}', '${color}')\n`;
   return code;
+}
+forBlock['line_size'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  if (document.getElementById('cname-'+name) == null) return ['\'\'', Order.NONE];
+  const code = `client.ls('${name}')`;
+  return [code, Order.NONE]
 }

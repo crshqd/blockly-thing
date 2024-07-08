@@ -1,5 +1,3 @@
-
-
 export const toolbox = {
   kind: 'categoryToolbox',
   contents: [
@@ -482,6 +480,9 @@ export const toolbox = {
       ],
     },
     {
+      "kind": "sep"
+    },
+    {
       kind: 'category',
       name: 'UI',
       colour: '315',
@@ -588,6 +589,10 @@ export const toolbox = {
           kind: 'block',
           type: 'set_line_color',
         },
+        {
+          kind: 'block',
+          type: 'line_size',
+        },
       ]
     },
     {
@@ -605,5 +610,11 @@ export const toolbox = {
       categorystyle: 'procedure_category',
       custom: 'PROCEDURE',
     },
+    {
+      "kind": "sep",
+      "cssConfig": {
+        "container": "textThankYou"
+      }
+    }
   ],
 };

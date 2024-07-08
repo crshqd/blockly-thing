@@ -142,4 +142,8 @@ client.slc = function (name, color) {
   const ctx = document.getElementById('cname-'+name).getContext('2d');
   ctx.strokeStyle = color;
 }
+client.ls = function (name) {
+  if (document.getElementById('cname-'+name) == null) return;
+  return document.getElementById('cname-'+name).getContext('2d').lineWidth;
+}
 module.exports = client;
