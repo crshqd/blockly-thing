@@ -218,6 +218,22 @@ forBlock['set_line_color'] = function (block, generator) {
 forBlock['line_size'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   if (document.getElementById('cname-'+name) == null) return ['\'\'', Order.NONE];
-  const code = `client.ls('${name}')`;
+  const code = `client.ls('${name.replace(
+    "'",
+    "\\'"
+  )}')`;
   return [code, Order.NONE]
+}
+forBlock['draw_line'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const x1 = block.getFieldValue('X1');
+  const y1 = block.getFieldValue('Y1');
+  const x2 = block.getFieldValue('X2');
+  const y2 = block.getFieldValue('Y2');
+
+  const code = `client.dl('${name.replace(
+    "'",
+    "\\'"
+  )}', ${x1}, ${y1}, ${x2}, ${y2})\n`;
+  return code;
 }

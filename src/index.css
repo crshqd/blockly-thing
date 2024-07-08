@@ -38,14 +38,3 @@ code {
 #output {
   height: 50%;
 }
-
-.textThankYou {
-  position: fixed;
-  bottom: 0;
-  padding-left: 110px;
-  font-family: system-ui, sans-serif;
-}
-
-.textThankYou::before {
-  content: "Thank you for using the IDGTAN editor";
-}

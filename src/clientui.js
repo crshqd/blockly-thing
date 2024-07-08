@@ -146,4 +146,12 @@ client.ls = function (name) {
   if (document.getElementById('cname-'+name) == null) return;
   return document.getElementById('cname-'+name).getContext('2d').lineWidth;
 }
+client.dl = function (name, x1, y1, x2, y2) {
+  if (document.getElementById('cname-'+name) == null) return;
+  const ctx = document.getElementById('cname-'+name).getContext('2d');
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.stroke();
+}
 module.exports = client;

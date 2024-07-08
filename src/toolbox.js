@@ -609,12 +609,6 @@ export const toolbox = {
       name: 'Functions',
       categorystyle: 'procedure_category',
       custom: 'PROCEDURE',
-    },
-    {
-      "kind": "sep",
-      "cssConfig": {
-        "container": "textThankYou"
-      }
     }
   ],
 };

@@ -529,6 +529,46 @@ const entries = [
     "output": "Number",
     "colour": 30
   },
+  {
+    "type": "draw_line",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Draw line %1 %2 %3 %4 %5",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_number",
+        "name": "X1",
+        "value": 0,
+        "min": 0
+      },
+      {
+        "type": "field_number",
+        "name": "Y1",
+        "value": 0,
+        "min": 0
+      },
+      {
+        "type": "field_number",
+        "name": "X2",
+        "value": 100,
+        "min": 0
+      },
+      {
+        "type": "field_number",
+        "name": "Y2",
+        "value": 100,
+        "min": 0
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 30
+  },
 ];
 
 export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(entries);
