@@ -43,7 +43,7 @@ code {
   position: fixed;
   bottom: 0;
   padding-left: 110px;
-  font-family:system-ui, sans-serif
+  font-family: system-ui, sans-serif;
 }
 
 .textThankYou::before {
