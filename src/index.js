@@ -5,6 +5,8 @@ import {javascriptGenerator} from 'blockly/javascript';
 import {toolbox} from './toolbox';
 import './index.css';
 import * as client from './clientui';
+import {registerFieldColour, FieldColour} from '@blockly/field-colour';
+registerFieldColour();
 
 Blockly.common.defineBlocks(blocks);
 Object.assign(javascriptGenerator.forBlock, forBlock);

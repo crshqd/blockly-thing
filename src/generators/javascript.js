@@ -205,3 +205,13 @@ forBlock['set_line_size'] = function (block, generator) {
   )}', ${size})`;
   return code;
 }
+forBlock['set_line_color'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const color = block.getFieldValue('COLOR');
+
+  const code = `//client.slc${name.replace(
+    "'",
+    "\\'"
+  )}', ${color})`;
+  return code;
+}

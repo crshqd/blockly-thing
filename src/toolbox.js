@@ -580,6 +580,14 @@ export const toolbox = {
           kind: 'block',
           type: 'delete_canvas',
         },
+        {
+          kind: 'block',
+          type: 'set_line_size',
+        },
+        {
+          kind: 'block',
+          type: 'set_line_color',
+        },
       ]
     },
     {
