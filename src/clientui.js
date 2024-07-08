@@ -127,4 +127,9 @@ client.addcanvas = function (name, width, height) {
   document.getElementById('output').appendChild(elem);
   document.getElementById('output').appendChild(br);
 }
+client.msic = function (name, width, height) {
+  if (document.getElementById('cname-'+name) == null) return;
+  document.getElementById('cname-'+name).width = width;
+  document.getElementById('cname-'+name).height = height;
+}
 module.exports = client;

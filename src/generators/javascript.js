@@ -178,3 +178,14 @@ forBlock['add_canvas'] = function (block, generator) {
   )}', ${width}, ${height})`;
   return code;
 }
+forBlock['modify_size_in_canvas'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const width = block.getFieldValue('WIDTH');
+  const height = block.getFieldValue('HEIGHT');
+
+  const code = `client.msic('${name.replace(
+    "'",
+    "\\'"
+  )}', ${width}, ${height})`;
+  return code;
+}

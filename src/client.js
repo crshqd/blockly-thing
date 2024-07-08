@@ -1,3 +1,3 @@
 const client = {};
-// get code in here and empty out blockly functions, replace parameters with alphabet, make blockly functions one line 
+// the code should look like this `client.ui1 = client.ui2 = client.ui3 = ... client.ui?? = function (a="a",b="b",c="c",d="d",e="e") {};`
 module.exports = client;

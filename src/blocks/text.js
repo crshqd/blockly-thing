@@ -427,6 +427,34 @@ const entries = [
     "previousStatement": null,
     "nextStatement": null,
     "colour": 30
+  },
+  {
+    "type": "modify_size_of_canvas",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Modify size of canvas %1 %2 %3",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_number",
+        "name": "WIDTH",
+        "value": 305,
+        "min": 0
+      },
+      {
+        "type": "field_number",
+        "name": "HEIGHT",
+        "value": 195,
+        "min": 0
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 30
   }
 ];
 
