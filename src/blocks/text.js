@@ -472,6 +472,49 @@ const entries = [
     "nextStatement": null,
     "colour": 30
   },
+  {
+    "type": "set_line_size",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Set line size %1 %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_number",
+        "name": "SIZE",
+        "value": 0,
+        "min": 0
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 30
+  },
+  {
+    "type": "set_line_color",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Set line color %1 %2",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_colour",
+        "name": "COLOR",
+        "colour": "#ff0000"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 30
+  },
 ];
 
 export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(entries);

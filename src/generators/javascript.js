@@ -195,3 +195,13 @@ forBlock['delete_canvas'] = function (block, generator) {
   const code = `client.cdelete('${name}');\n`;
   return code;
 };
+forBlock['set_line_size'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const size = block.getFieldValue('SIZE');
+
+  const code = `client.sls('${name.replace(
+    "'",
+    "\\'"
+  )}', ${size})`;
+  return code;
+}
