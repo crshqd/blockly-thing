@@ -571,7 +571,15 @@ export const toolbox = {
         {
           kind: 'block',
           type: 'add_canvas',
-        }
+        },
+        {
+          kind: 'block',
+          type: 'modify_size_of_canvas',
+        },
+        {
+          kind: 'block',
+          type: 'delete_canvas',
+        },
       ]
     },
     {

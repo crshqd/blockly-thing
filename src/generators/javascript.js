@@ -178,7 +178,7 @@ forBlock['add_canvas'] = function (block, generator) {
   )}', ${width}, ${height})`;
   return code;
 }
-forBlock['modify_size_in_canvas'] = function (block, generator) {
+forBlock['modify_size_of_canvas'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   const width = block.getFieldValue('WIDTH');
   const height = block.getFieldValue('HEIGHT');
@@ -189,3 +189,9 @@ forBlock['modify_size_in_canvas'] = function (block, generator) {
   )}', ${width}, ${height})`;
   return code;
 }
+forBlock['delete_canvas'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  if (document.getElementById('cname-' + name) == null) return '';
+  const code = `client.cdelete('${name}');\n`;
+  return code;
+};

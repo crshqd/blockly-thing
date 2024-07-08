@@ -455,7 +455,23 @@ const entries = [
     "previousStatement": null,
     "nextStatement": null,
     "colour": 30
-  }
+  }, 
+  {
+    "type": "delete_canvas",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Delete canvas %1",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 315
+  },
 ];
 
 export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(entries);
