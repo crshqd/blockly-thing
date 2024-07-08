@@ -132,4 +132,14 @@ client.msic = function (name, width, height) {
   document.getElementById('cname-'+name).width = width;
   document.getElementById('cname-'+name).height = height;
 }
+client.sls = function (name, size) {
+  if (document.getElementById('cname-'+name) == null) return;
+  const ctx = document.getElementById('cname-'+name).getContext('2d');
+  ctx.lineWidth = size;
+}
+client.slc = function (name, color) {
+  if (document.getElementById('cname-'+name) == null) return;
+  const ctx = document.getElementById('cname-'+name).getContext('2d');
+  ctx.strokeStyle = color;
+}
 module.exports = client;

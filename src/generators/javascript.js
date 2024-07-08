@@ -209,9 +209,9 @@ forBlock['set_line_color'] = function (block, generator) {
   const name = block.getFieldValue('NAME');
   const color = block.getFieldValue('COLOR');
 
-  const code = `//client.slc${name.replace(
+  const code = `client.slc('${name.replace(
     "'",
     "\\'"
-  )}', ${color})`;
+  )}', '${color}')`;
   return code;
 }
