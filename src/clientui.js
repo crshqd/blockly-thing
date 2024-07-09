@@ -132,7 +132,7 @@ client.msic = function (name, width, height) {
   document.getElementById('cname-'+name).width = width;
   document.getElementById('cname-'+name).height = height;
 }
-client.cdelete = function (name) {r54t
+client.cdelete = function (name) {
   if (document.getElementById('cname-'+name) == null) return;
   document.getElementById('cname-'+name).remove();
 }
@@ -169,5 +169,11 @@ client.dc = function (name, x1, y1, size) {
   const ctx = document.getElementById('cname-'+name).getContext('2d');
   ctx.arc(x1, y1, size, 0, 2 * Math.PI);
   ctx.stroke();
+}
+client.dt = function (name, x1, y1, fs, text) {
+  if (document.getElementById('cname-'+name) == null) return;
+  const ctx = document.getElementById('cname-'+name).getContext('2d');
+  ctx.font = `${fs}pt Arial`;
+  ctx.fillText(text, x1, y1);
 }
 module.exports = client;

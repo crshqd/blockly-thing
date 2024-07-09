@@ -641,6 +641,45 @@ const entries = [
     "previousStatement": null,
     "nextStatement": null,
     "colour": 30
+  },
+  {
+    "type": "draw_text",
+    "tooltip": "",
+    "helpUrl": "",
+    "message0": "Draw text %1 %2 %3 %4 %5",
+    "args0": [
+      {
+        "type": "field_input",
+        "name": "NAME",
+        "text": "name"
+      },
+      {
+        "type": "field_number",
+        "name": "X1",
+        "value": 30,
+        "min": 0
+      },
+      {
+        "type": "field_number",
+        "name": "Y1",
+        "value": 30,
+        "min": 0
+      },
+      {
+        "type": "field_number",
+        "name": "FS",
+        "value": 16,
+        "min": 0
+      },
+      {
+        "type": "field_input",
+        "name": "TEXT",
+        "text": "Hello World"
+      }
+    ],
+    "previousStatement": null,
+    "nextStatement": null,
+    "colour": 30
   }
 ];
 

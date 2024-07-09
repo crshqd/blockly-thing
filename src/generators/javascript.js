@@ -259,3 +259,19 @@ forBlock['draw_circle'] = function (block, generator) {
   )}', ${x1}, ${y1}, ${size})\n`;
   return code;
 }
+forBlock['draw_text'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const x1 = block.getFieldValue('X1');
+  const y1 = block.getFieldValue('Y1');
+  const fs = block.getFieldValue('FS');
+  const text = block.getFieldValue('TEXT');
+
+  const code = `client.dt('${name.replace(
+    "'",
+    "\\'"
+  )}', ${x1}, ${y1}, ${fs}, '${text.replace(
+    "'",
+    "\\'"
+  )}')\n`;
+  return code;
+}
