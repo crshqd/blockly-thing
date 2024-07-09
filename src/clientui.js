@@ -132,6 +132,10 @@ client.msic = function (name, width, height) {
   document.getElementById('cname-'+name).width = width;
   document.getElementById('cname-'+name).height = height;
 }
+client.cdelete = function (name) {r54t
+  if (document.getElementById('cname-'+name) == null) return;
+  document.getElementById('cname-'+name).remove();
+}
 client.sls = function (name, size) {
   if (document.getElementById('cname-'+name) == null) return;
   const ctx = document.getElementById('cname-'+name).getContext('2d');
@@ -152,6 +156,18 @@ client.dl = function (name, x1, y1, x2, y2) {
   ctx.beginPath();
   ctx.moveTo(x1, y1);
   ctx.lineTo(x2, y2);
+  ctx.stroke();
+}
+client.db = function (name, x1, y1, sizex, sizey) {
+  if (document.getElementById('cname-'+name) == null) return;
+  const ctx = document.getElementById('cname-'+name).getContext('2d');
+  ctx.rect(x1, y1, sizex, sizey);
+  ctx.stroke();
+}
+client.dc = function (name, x1, y1, size) {
+  if (document.getElementById('cname-'+name) == null) return;
+  const ctx = document.getElementById('cname-'+name).getContext('2d');
+  ctx.arc(x1, y1, size, 0, 2 * Math.PI);
   ctx.stroke();
 }
 module.exports = client;

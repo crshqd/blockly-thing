@@ -7,10 +7,7 @@ forBlock['add_text'] = function (block, generator) {
   const size = block.getFieldValue('SIZE');
   const text = block.getFieldValue('TEXT');
   
-  const code = `client.addtext('${font}', ${size}, '${text.replace(
-    "'",
-    "\\'"
-  )}')\n`;
+  const code = `client.addtext('${font}', ${size}, '${jsStringEscape(text)}')\n`;
   return code;
 }
 forBlock['add_image'] = function (block, generator) {
@@ -235,5 +232,30 @@ forBlock['draw_line'] = function (block, generator) {
     "'",
     "\\'"
   )}', ${x1}, ${y1}, ${x2}, ${y2})\n`;
+  return code;
+}
+forBlock['draw_box'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const x1 = block.getFieldValue('X1');
+  const y1 = block.getFieldValue('Y1');
+  const sizex = block.getFieldValue('SIZEX');
+  const sizey = block.getFieldValue('SIZEY');
+
+  const code = `client.db('${name.replace(
+    "'",
+    "\\'"
+  )}', ${x1}, ${y1}, ${sizex}, ${sizey})\n`;
+  return code;
+}
+forBlock['draw_circle'] = function (block, generator) {
+  const name = block.getFieldValue('NAME');
+  const x1 = block.getFieldValue('X1');
+  const y1 = block.getFieldValue('Y1');
+  const size = block.getFieldValue('SIZE');
+
+  const code = `client.dc('${name.replace(
+    "'",
+    "\\'"
+  )}', ${x1}, ${y1}, ${size})\n`;
   return code;
 }

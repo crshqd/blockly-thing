@@ -593,6 +593,14 @@ export const toolbox = {
           kind: 'block',
           type: 'line_size',
         },
+        {
+          kind: 'block',
+          type: 'draw_line',
+        },
+        {
+          kind: 'block',
+          type: 'draw_box',
+        },
       ]
     },
     {
