@@ -601,6 +601,10 @@ export const toolbox = {
           kind: 'block',
           type: 'draw_box',
         },
+        {
+          kind: 'block',
+          type: 'draw_circle',
+        },
       ]
     },
     {
